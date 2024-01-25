@@ -18,3 +18,8 @@ J'ai choisi de séparer mon code en 3 fichiers afin de gagner en lisibilité, ma
 
 + Utilisation de async/await pour du code non-bloquant
 + Encodage/hachage des mots de passe pour plus de sécurité
+
+## Remarque
+
+Le passage du paramètre de l'en-tête fonctionne sans problèmes par la commande curl, mais ne fonctionne pas via l'interface /docs s'il est nommé "Authorization". En revanche, l'utilisation d'un autre nom pour ce paramètre rend cette chose possible via l'interface /docs.
+(Voir: https://github.com/tiangolo/fastapi/issues/612#issuecomment-547886504)
