@@ -14,7 +14,7 @@ api = FastAPI()
 
 #Vérification de l'authentification
 def check_auth_type(user_type = str):
-    def check_auth(credentials: str = Header(description="Auth method and username:password")):
+    def check_auth(credentials: str = Header(alias="Authorization", description="Auth method and username:password")):
         if not credentials:
             raise HTTPException(status_code=411, detail="Authorization header missing")
 
